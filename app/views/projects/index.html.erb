@@ -4,10 +4,12 @@
   <% @projects.each do |project|%>
 
       <%if project.description !=nil%>
-        <li><a href="/show/<%=project.id%>"><%=project.name%>-<%=project.description%></a></li>
+        <li><a href="/projects/<%=project.id%>"><%=project.name%>-<%=project.description%></a></li>
       <%else%>
-        <li><a href="/show/<%=project.id%>"><%=project.name%></a></li>
+        <li><a href="/projects/<%=project.id%>"><%=project.name%></a></li>
       <%end%>
 
   <%end%>
 </ul>
+
+<a href="/projects/new"><h3>Add a new project</h3></a>

@@ -9,4 +9,15 @@ class ProjectsController < ApplicationController
       render "no_projects_found"
     end
   end
+  def new
+    @project = Project.new
+  end
+
+  def create
+    @projects = Project.new(
+      name: params[:project][:name],
+      description: params[:project][:description])
+    @projects.save
+    redirect_to '/projects/#{@projects.id}'
+  end
 end

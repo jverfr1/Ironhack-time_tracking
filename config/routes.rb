@@ -9,5 +9,11 @@ Rails.application.routes.draw do
 
   get '/projects', to: 'projects#index'
 
-  get '/show/:id', to: 'projects#show' 
+  get '/projects/new', to: 'projects#new'
+  
+  post '/projects', to: 'projects#create'
+
+  get '/projects/:id', to: 'projects#show' 
+
+
 end
