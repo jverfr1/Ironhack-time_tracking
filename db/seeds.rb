@@ -8,5 +8,7 @@
 
 
 for i in 1..10
-  Project.create!(name: "Project #{i}", description: "This is project's #{i} description")
+  project = Project.create!(name: "Project #{i}", description: "This is project's #{i} description")
+  project.time_entries.create(minutes: rand(1..60), hours: rand(0..2))
 end
+
