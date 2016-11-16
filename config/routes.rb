@@ -8,4 +8,6 @@ Rails.application.routes.draw do
   post '/calculate', to: 'site#calculate'
 
   get '/projects', to: 'projects#index'
+
+  get '/show/:id', to: 'projects#show' 
 end
