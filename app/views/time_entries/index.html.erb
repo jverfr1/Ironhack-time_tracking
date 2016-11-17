@@ -1,7 +1,8 @@
-<ul><h1><%=@project.name%></h1>
+<h1><%=@project.name%></h1><ul>
 
 <%@entries.each do |entry|%>
 	<li><%=link_to "#{entry.hours}h #{entry.minutes}m - #{entry.data}", "/projects/#{@project.id}/time_entries/#{entry.id}/edit"%></li>
+	<%=link_to 'Delete', project_time_entry_path(@project, entry), method: :delete, data: {confirm: 'Are you sure?'}%>
 <!-- 
 	<li><%=entry.hours%>h <%=entry.minutes%>m - <%=entry.created_at%> </li>
  -->
