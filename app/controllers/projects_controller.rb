@@ -9,6 +9,7 @@ class ProjectsController < ApplicationController
       render "no_projects_found"
     end
   end
+  
   def new
     @project = Project.new
   end

@@ -1,0 +1,11 @@
+<ul><h1><%=@project.name%></h1>
+
+<%@entries.each do |entry|%>
+	<li><%=link_to "#{entry.hours}h #{entry.minutes}m - #{entry.data}", "/projects/#{@project.id}/time_entries/#{entry.id}/edit"%></li>
+<!-- 
+	<li><%=entry.hours%>h <%=entry.minutes%>m - <%=entry.created_at%> </li>
+ -->
+<%end%>
+</ul>
+
+
